@@ -8,6 +8,7 @@ public class DriveTaxi2 {
 		t2.start();
 		t2.run();
 		t2.display();
+		
 	}
 
 }
