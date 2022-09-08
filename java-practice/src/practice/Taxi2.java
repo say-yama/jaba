@@ -3,6 +3,7 @@ package practice;
 public class Taxi2 extends Car6 {
 	private int price;
 
+	
 	public Taxi2(int no) {
 		this(no, 0);
 		price = 0;
