@@ -18,6 +18,7 @@ public class Taxi2 extends Car6 {
 		price = 420;
 	}
 
+	
 	public void run() {
 		price += 80;
 	}
