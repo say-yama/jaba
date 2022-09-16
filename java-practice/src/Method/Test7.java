@@ -1,24 +1,21 @@
 package Method;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Test7 {
 
-	public static void main(String[] args)
-			throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int kuku[][] = new int[9][9];
+	public static void main(String[] args) {
+		for (int n = 10000; n < 10100; n++)
+			if (IsPrimeNumber(n))
+				System.out.print(n + " ");
+	}
 
-		for (int i = 0; i < 9; i++)
-			for (int j = 0; j < 9; j++)
-				kuku[i][j] = (i + 1) * (j + 1);
+	static boolean IsPrimeNumber(int num) {
+		if (num <= 3)
+			return true;
 
-		int p = Integer.parseInt(br.readLine());
-		int q = Integer.parseInt(br.readLine());
+		for (int i = 2; i <= (num / 2); i++)
+			if ((num % i) == 0)
+				return false;
 
-		System.out.println(kuku[p - 1][q - 1]);
-
+		return true;
 	}
 }
