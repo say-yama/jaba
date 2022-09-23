@@ -1,20 +1,31 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+class Animal
+{
+    public String Name;
+    public int Age;
 
-public class Anaume {
+    public void ShowProfile()
+    {
+        System.out.println( "名前は、" + Name + "、" + Age + "歳です。" );
+    }
+}
 
-	public static void main(String[] args) throws IOException {
-		// 自分の得意な言語で
-		// Let's チャレンジ！！
-		BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
-		int s = Integer.parseInt(sc.readLine());
-		int f = Integer.parseInt(sc.readLine());
+class Cat extends Animal
+{
+    public void Sleep()
+    {
+        System.out.println( "スースー" );
+    }
+}
 
-		while (s < f-1) {
-			s++;
-			System.out.print(s);
-		}
-		System.out.println();
-	}
+public class Anaume
+{
+    public static void main( String[] args )
+    {
+        Cat MyCat = new Cat();
+
+        MyCat.Name = "たま";
+        MyCat.Age = 3;
+        MyCat.ShowProfile();
+        MyCat.Sleep();
+    }
 }
